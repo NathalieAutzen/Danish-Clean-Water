@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Drift</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header_screen">Drift</h1>
+        <nav class="navbar">
+            <a href="menu-pedel.html">
+                <section class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </section>
+            </a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="value">
+            <h6 class="value__header"> ORP værdi</h6>
+            <section class="value__status">
+                <h2 class="values value__orp"></h2>
+                <h6 class="values value__set">/600</h6>
+                <section class="value__edit"><img class="value__editImg" src="images/pen.png" alt=""></section>
+            </section>
+        </section>
+
+        <section class="status">
+            <section class="status__area">
+                <a href="errormessage.html">
+                    <h2 class="status__header">Drift</h2>
+                    <section class="status__info">
+                        <img class="status__infoImg" src="images/white-info.png" alt="">
+                        <p class="status__infoText drift"></p>
+                        <img class="status__infoImg status__arrowImg" src="images/white-arrow-right.png" alt="">
+                    </section>
+                    <img class="statusImg" src="" alt="">
+                    
+                </a>
+
+                <section class="status__proces">
+                    <button class="--inactive --activeStop">Stop</button>
+                    <button class="--inactive --activeStart">Start</button>
+                </section>
+            </section>
+
+            <section class="status__area">
+                <a href="errormessage.html">
+                    <h2 class="status__header">Dosering</h2>
+                    <section class="status__info">
+                        <img class="status__infoImg" src="images/white-info.png" alt="">
+                        <p class="status__infoText dosering"></p>
+                        <img class="status__infoImg status__arrowImg" src="images/white-arrow-right.png" alt="">
+                    </section>
+                    <img class="statusImg" src="" alt="">
+                </a>
+
+                <section class="status__proces">
+                    <button class="--xxsmall --inactive --activeStop">Stop</button>
+                    <button class="--xxsmall --inactive --activeStart">Start</button>
+                </section>
+
+            </section>
+        </section>
+    </main>
+
+
+    <script src="status.js"></script>
+</body>
+</html>

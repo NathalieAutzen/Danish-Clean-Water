@@ -1,0 +1,77 @@
+{
+    "errorcodes": [
+        {
+            "status": "Proces ok",
+            "explanation": "Processen er stoppet af brugeren. Der er intet, der hindrer, at processen startes.",
+            "type": "drift",
+            "severity": "Good"
+        },
+        {
+            "status": "Proces igang",
+            "explanation": "Generatoren er i gang med at producere Neuthox.",
+            "type": "dosering",
+            "severity": "Good"
+        },
+        {
+            "status": "Betjening aktiveret",
+            "explanation": "Produktionen styres manuelt fra HMI'et.",
+            "type": "drift",
+            "severity": "Good"
+        },
+        {
+            "status": "Blødgøring snart tom",
+            "explanation": "Blødgøringspatronen er snart brugt op og bør skiftes.",
+            "type": "dosering",
+            "severity": "Notice"
+        },
+        {
+            "status": "Genstart efter tryksvigt",
+            "explanation": "Vandtanken er tom. Produktion genoptages, når den er fyldt.",
+            "type": "dosering",
+            "severity": "Notice"
+        },
+        {
+            "status": "Vandpumpen kræver service",
+            "explanation": "Det er tid til at efterse vandpumpen.",
+            "type": "drift",
+            "severity": "Notice"
+        },
+        {
+            "status": "Brinepumpen kræver service",
+            "explanation": "Det er tid til at efterse brinepumpen.",
+            "type": "drift",
+            "severity": "Notice"
+        },
+        {
+            "status": "Cathoxpumpen kræver service",
+            "explanation": "Det er tid til at efterse cathoxpumpen.",
+            "type": "drift",
+            "severity": "Notice"
+        },
+        {
+            "status": "Blødgøring tom",
+            "explanation": "Blødgøringspatronen er brugt op og skal skiftes før produktion kan genoptages.",
+            "type": "dosering",
+            "severity": "Warning"
+        },
+        {
+            "status": "Læk alarm",
+            "explanation": "Produktionen er stoppet fordi lækføleren i spildbakken påvirkes.",
+            "type": "dosering",
+            "severity": "Warning"
+        },
+        {
+            "status": "Ingen blødgøring valgt",
+            "explanation": "Installatøren skal indstille generatoren til den tilsluttede blødgøringspatron. Det er endnu ikke sket.",
+            "type": "drift",
+            "severity": "Notice"
+        },
+        {
+            "status": "Ingen salt",
+            "explanation": "Saltniveauet er lavt og produktionen af Neuthox stopper snart.",
+            "type": "dosering",
+            "severity": "Warning"
+        }
+    
+    ]
+}

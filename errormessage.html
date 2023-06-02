@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fejlmeddelse</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header_screen">Fejlmeddelse</h1>
+        <nav class="navbar">
+        </nav>
+    </header>
+
+    <main class="errorNotice">
+        <section class="errorNotice__description --xxlarge">
+            <img class="errorNotice__img" src="images/white-info.png" alt="">
+            <p class="errorNotice__info"></p>
+        </section>
+
+        <section class="steps --xlarge">
+            <p class="steps__info">1 Stop Drift før du går videre til næste trin</p>
+            <button class="steps__btn  --xsmall --inactive --activeStop">Stop</button>
+        </section>
+
+        <section class="steps --xlarge">
+            <p class="steps__info">2 Påfyld vand</p>
+        </section>
+
+        <section class="steps --xlarge">
+            <p class="steps__info">3 Start Drift igen</p>
+            <button class="steps__btn --xsmall --inactive --activeStart">Start</button>
+        </section>
+
+        <section class="errorNotice__exit">
+            <a href="drift.html">
+                <button class="errorNotice__exitBtn --primary --small">Afslut</button>
+            </a>
+        </section>
+
+    </main>
+
+    <script src="errorMessage.js"></script>
+</body>
+</html>

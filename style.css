@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    /*color*/
+    --inactive: #CBCBCB;
+    --inactive-border: #ADADAD;
+    --stop: #FB3F3F;
+    --stop-border: #C31717;
+    --start: #56DF64;
+    --start-border: #2EB73C;
+
+    --default-status: #339966;
+    --warning-status: #E07400;
+    --error-status: #9F2B2C;
+
+    --default-notice: #074B29;
+    --warning-notice: #282828;
+
+    --primary-font: #282828;
+    --secondary-font: #fefefe;
+
+    --header-background: #496D69;
+
+    --error-message-status: #9F2B2C;
+    --error-steps: #6D8A87;
+
+    --btn-primary: #809996;
+    --btn-border: #4E6764;
+
+    --primary-color: #282828;
+    --secondary-color: #fefefe;
+
+    /*text*/
+    --fontSizeXXSmall: 10px; /* H6 */
+    --fontSizeXSmall: 11px; /* H5 */
+    --fontSizeSmall: 12px; /* Paragraf */
+    --fontSizeMedium: 13px; /* H4 */
+    --fontSizeLarge: 14px;/* H3 */
+    --fontSizeXLarge: 16px; /* H2 */
+    --fontSizeXXLarge: 22px; /* H1 */
+
+    /*spacing*/
+    --spaceXXSmall: 4px;
+    --spaceXSmall: 6px;
+    --spaceSmall: 8px;
+    --spaceMedium: 10px;
+    --spaceLarge: 12px;
+
+    /* Button width */
+    --smallWidth-button: 60px;
+    --mediumWidth-button: 76px;
+    --largeWidth-button: 152px;
+    --xlargeWidth-button: 304px;
+
+    /* Button height */
+    --smallHeight-button: 30px;
+    --mediumHeight-button: 40px;
+    --largeHeight-button: 60px;
+    --xlargeHeight-button: 80px;
+    --xxlargeHeight-button: 120px;
+
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    width: calc(320px*1.1);
+    height: calc(240px*1.1);
+
+    margin: 0 auto;
+
+    border: 6px solid var(--primary-color);
+}
+
+/*font*/
+H1,
+H2,
+H3,
+H6,
+P {
+    font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+    font-size: var(--fontSizeXXSmall);
+}
+
+h5 {
+    font-size: var(--fontSizeXSmall);
+}
+
+p {
+    font-size: var(--fontSizeSmall);
+
+}
+
+h4 {
+    font-size: var(--fontSizeMedium);
+}
+
+h3 {
+    font-size: var(--fontSizeLarge);
+}
+
+h2 {
+    font-size: var(--fontSizeXLarge);
+}
+
+h1 {
+    font-size: var(--fontSizeXXLarge);
+}
+
+main {
+    margin: var(--spaceSmall)
+}
+
+a {
+    text-decoration: none
+}
+
+
+/* ---- ---- ---- ---- Knapper ---- ---- ---- ---- */
+
+button {
+    border: 2px solid;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    box-shadow: none;
+}
+
+.--primary {
+    background-color: var(--btn-primary);
+    border-color: var(--btn-border);
+}
+
+.--xsmall {
+    width: var(--smallWidth-button);
+    height: var(--smallHeight-button);
+}
+
+.--small {
+    width: var(--mediumWidth-button);
+    height: var(--smallHeight-button);
+}
+
+.--medium {
+    width: var(--mediumWidth-button);
+    height: var(--mediumlHeight-button);
+}
+
+.--large {
+    width: var(--largeWidth-button);
+    height: var(--mediumlHeight-button);
+}
+
+.--xlarge {
+    width: 100%;
+    height: var(--smallHeight-button);
+}
+
+.--xxlarge {
+    width: 100%;
+    height: var(--mediumHeight-button);
+
+}
+
+.--inactive {
+    background-color: var(--inactive);
+    border-color: var(--inactive-border);
+
+}
+
+.--activeStop {
+    background-color: var(--stop);
+    border-color: var(--stop-border);
+
+    height: 30px;
+    width: 60px;
+}
+
+.--activeStart {
+    background-color: var(--start);
+    border-color: var(--start-border);
+
+    height: 30px;
+    width: 60px;
+}
+
+/* ---- ---- ---- ---- Status tilstande ---- ---- ---- ---- */
+
+.--default {
+    background-color: var(--default-status);
+}
+
+.--warning {
+    background-color: var(--warning-status);
+}
+
+.--error {
+    background-color: var(--error-status);
+}
+
+.--defaultNotice {
+    background-color: var(--default-notice);
+}
+
+.--warningNotice {
+    background-color: var(--warning-notice);
+}
+
+/* ---- ---- ---- ---- Pause skærmen ---- ---- ---- ---- */
+
+/* Skærmen */
+.pause {
+    position: relative;
+}
+
+/* billede */
+.pauseImg {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 130px;
+    top: 85px;
+}
+
+.goodImg {
+    display: none;
+}
+
+.mediumImg {
+    display: none;
+}
+
+.badImg {
+    display: none;
+}
+
+/* knappen */
+.pauseBtn {
+    position: absolute;
+    width: 138px;
+    height: 138px;
+    left: 105px;
+    top: 60px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25), -20px -20px 60px -5px rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    border: none;
+}
+
+
+/* ---- ---- ---- ---- Menu bar ---- ---- ---- ---- */
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--header-background);
+    height: 32px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: var(--spaceMedium);
+}
+
+.header_back {
+    width: 20px;
+    padding-top: 6px;
+}
+
+.header_screen {
+    font-size: var(--fontSizeXLarge);
+    color: var(--secondary-font);
+    grid-column-start: 2;
+    grid-row-start: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    padding: 3px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin: 4px auto;
+    background-color: var(--secondary-font);
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* ---- ---- ---- ---- Drift skærm ---- ---- ---- ---- */
+.value {
+    width: 196px;
+    height: 46px;
+    background-color: var(--inactive);
+    margin: 8px auto;
+}
+
+.values {
+    position: relative;
+    left: 15px;
+}
+
+.value__header {
+    padding-left: var(--spaceXSmall);
+    padding-top: var(--spaceXSmall);
+    color: var(--primary-font);
+}
+
+.value__status {
+    border-radius: 20px;
+    height: 22px;
+    width: 180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.value__edit {
+    background-color: var(--primary-font);
+    width: 44px;
+    height: 22px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: relative;
+    float: right;
+    left: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.value__editImg {
+    width: 16px;
+    height: 16px;
+}
+
+.value__orp {
+    color: var(--secondary-font);
+}
+
+.value__set {
+    color: var(--secondary-font);
+}
+
+.status {
+    width: 100%;
+    height: 160px;
+    background-color: var(--primary-font);
+    display: flex;
+    gap: var(--spaceXSmall);
+}
+
+.status__area {
+    width: 50%;
+    height: 160px;
+}
+
+.status__header {
+    color: var(--secondary-font);
+    margin: var(--spaceXXSmall);
+}
+
+.status__info {
+    color: var(--secondary-font);
+
+    width: 100%;
+    height: 30px;
+
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr; 
+    align-items: center;
+    gap: var(--spaceXXSmall);
+}
+
+.--defaultNotice {
+    background-color: var(--default-notice);
+}
+
+.--warningNotice {
+    background-color: var(--warning-notice);
+}
+
+.status__infoImg {
+    margin: var(--spaceXXSmall);
+
+    height: 22px;
+    width: 22px;
+
+    display: grid;
+    grid-column-start: 1;
+    align-items: center;
+}
+
+.status__infoText{
+    font-size: var(--fontSizeXXSmall);
+    grid-column-start: 2;
+    display: grid;
+    align-items: center;
+}
+
+.status__arrowImg {
+    display: grid;
+    align-items: center;
+    grid-column-start: 3;
+}
+
+.status__proces {
+    background-color: var(--inactive);
+    border: var(--inactive-border) 2px solid;
+    
+    max-width: 100%;
+    height: 40px; 
+
+    padding-left: var(--spaceXXSmall);
+    padding-right: var(--spaceXXSmall);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.statusImg {
+    width: 31%;
+    margin: var(--spaceXXSmall) auto;
+
+    display: flex;
+}
+
+/* .--defaultImg {
+    position: relative;
+}
+
+.--warningImg {
+    position: relative;
+}
+
+.--errorImg {
+    position: relative;
+} */
+
+/* ---- ---- ---- ---- Menu skærm ---- ---- ---- ---- */
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: var(--spaceSmall);
+}
+
+.menu_btn {
+    width: 150px;
+    height: 71px;
+    margin: var(--spaceXXSmall);
+    border-radius: 6px;
+    color: var(--primary-font);
+    font-weight: bold;
+    font-size: var(--fontSizeLarge);
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: var(--spaceXSmall);
+}
+
+.menu_btn:active {
+    box-shadow: none;
+}
+
+.menuImg {
+    width: 44px;
+}
+
+
+
+/* ---- ---- ---- ---- Fejlmeddelser ---- ---- ---- ---- */
+.errorNotice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorNotice__description {
+    background-color: var(--error-message-status);
+    margin-bottom: var(--spaceSmall);
+    display: flex;
+    align-items: center;
+}
+
+.errorNotice__img {
+    height: 20px;
+    width: 20px;
+    margin-left: var(--spaceXXSmall);
+}
+
+.errorNotice__info {
+    color: var(--secondary-font);
+    font-weight: bold;
+    margin-left: var(--spaceXSmall);
+}
+.errorNotice__exit {
+    width: 100%;    
+
+    display: flex;
+    justify-content: end;
+
+}
+
+.errorNotice__exitBtn {
+    font-weight: bold;
+    color: var(--primary-font);
+}
+
+.steps {
+    background-color: var(--error-steps);
+    margin-bottom: var(--spaceXSmall);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.steps__info {
+    color: var(--primary-font);
+    font-weight: bold;
+
+    display: flex;
+    gap: var(--spaceXXSmall);
+
+    margin-left: var(--spaceXXSmall);
+}
+
+.steps__btn {
+    font-weight: bold;
+    color: var(--primary-font);
+}
